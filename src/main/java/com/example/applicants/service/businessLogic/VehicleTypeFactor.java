@@ -1,8 +1,8 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 public class VehicleTypeFactor {
 
-    public double calculateTypeFactor(String vehicleType){
+    public static double calculateTypeFactor(String vehicleType){
 
         double typeFactor = 0.0;
 

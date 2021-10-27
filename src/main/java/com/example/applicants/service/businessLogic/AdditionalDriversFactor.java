@@ -1,8 +1,8 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 public class AdditionalDriversFactor {
 
-    public double calculateAdditionalDriversFactor (String additionalDrivers){
+    public static double calculateAdditionalDriversFactor (String additionalDrivers){
 
         double additionalDriversFactor = 0.0;
         int additionalDriversAsInt = Integer.parseInt(additionalDrivers);

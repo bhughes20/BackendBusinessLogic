@@ -1,8 +1,8 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 public class VehicleValueFactor {
 
-    public double calculateVehicleValueFactor (String vehicleValue){
+    public static double calculateVehicleValueFactor (String vehicleValue){
 
         double vehicleValueFactor = 0.0;
         int vehicleValueAsInt = Integer.parseInt(vehicleValue);

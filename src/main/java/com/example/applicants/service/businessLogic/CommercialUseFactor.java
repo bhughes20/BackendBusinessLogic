@@ -1,8 +1,8 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 public class CommercialUseFactor {
 
-    public double calculateCommercialUseFactor (String commercialUse){
+    public static double calculateCommercialUseFactor (String commercialUse){
 
         double commercialUseFactor = 0.0;
 

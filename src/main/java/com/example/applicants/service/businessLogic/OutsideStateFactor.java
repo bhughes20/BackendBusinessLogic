@@ -1,8 +1,8 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 public class OutsideStateFactor {
 
-    public double calculateOutsideStateFactor (String outsideState){
+    public static double calculateOutsideStateFactor (String outsideState){
 
         double outsideStateFactor = 0.0;
 

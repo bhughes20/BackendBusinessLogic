@@ -1,4 +1,4 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

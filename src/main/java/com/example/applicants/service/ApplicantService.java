@@ -2,6 +2,7 @@ package com.example.applicants.service;
 
 import com.example.applicants.model.Applicant;
 import com.example.applicants.repository.ApplicantRepository;
+import com.example.applicants.service.businessLogic.BusinessLogic;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,9 +12,11 @@ import java.util.Optional;
 public class ApplicantService {
 
     private final ApplicantRepository repository;
+    private final BusinessLogic businessLogic;
 
-    public ApplicantService(ApplicantRepository repository) {
+    public ApplicantService(ApplicantRepository repository, BusinessLogic businessLogic) {
         this.repository = repository;
+        this.businessLogic = businessLogic;
     }
 
     public List<Applicant> getAllApplicants() {
@@ -21,6 +24,7 @@ public class ApplicantService {
     }
 
     public Applicant save(Applicant applicant) {
+        businessLogic.calculateInsuranceQuote(applicant);
         return repository.save(applicant);
     }//Save a New Record
 

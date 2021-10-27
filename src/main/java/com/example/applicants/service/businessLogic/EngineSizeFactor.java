@@ -1,8 +1,8 @@
-package com.example.applicants.businessLogic;
+package com.example.applicants.service.businessLogic;
 
 public class EngineSizeFactor {
 
-    public double calculateEngineSizeFactor(String engineSize){
+    public static double calculateEngineSizeFactor(String engineSize){
 
         double engineSizeFactor = 0.0;
 
