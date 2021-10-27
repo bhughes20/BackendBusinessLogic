@@ -17,7 +17,7 @@ public class VehicleTypeFactor {
         } else if (vehicleType.equalsIgnoreCase("Other")){
             return typeFactor = 1.7;
         } else {
-            return typeFactor;
+            throw new IllegalArgumentException("Invalid vehicle type");
         }
     }
 }

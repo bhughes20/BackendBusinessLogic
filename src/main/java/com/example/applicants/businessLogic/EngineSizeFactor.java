@@ -19,7 +19,7 @@ public class EngineSizeFactor {
         } else if (engineSize.equalsIgnoreCase("Other")){
             return engineSizeFactor = 3.5;
         } else {
-            return engineSizeFactor;
+            throw new IllegalArgumentException("Invalid engine size");
         }
     }
 }
