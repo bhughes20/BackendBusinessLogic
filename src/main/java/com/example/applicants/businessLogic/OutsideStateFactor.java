@@ -11,7 +11,7 @@ public class OutsideStateFactor {
         } else if (outsideState.equalsIgnoreCase("No")){
             return outsideStateFactor = 1.0;
         } else {
-            return outsideStateFactor;
+            throw new IllegalArgumentException("Invalid entry");
         }
     }
 }

@@ -33,6 +33,7 @@ class VehicleTypeFactorTest {
 
     @Test
     void calculateTypeFactorInvalid() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {vehicleTypeFactor.calculateTypeFactor(invalidCarType);});
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> {vehicleTypeFactor.calculateTypeFactor(invalidCarType);});
     }
 }

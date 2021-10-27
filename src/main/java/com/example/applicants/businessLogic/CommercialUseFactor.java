@@ -11,7 +11,7 @@ public class CommercialUseFactor {
         } else if (commercialUse.equalsIgnoreCase("No")){
             return commercialUseFactor = 1.0;
         } else {
-            return commercialUseFactor;
+            throw new IllegalArgumentException("Invalid entry");
         }
     }
 }
