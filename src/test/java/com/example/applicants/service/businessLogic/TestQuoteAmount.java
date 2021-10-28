@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class BusinessLogicTest {
+class TestQuoteAmount {
 
 /*    Double typeFactor, engineSizeFactor, additionalDriversFactor,
             commercialUseFactor, outsideStateFactor, vehicleValueFactor;
@@ -15,13 +15,13 @@ class BusinessLogicTest {
             commercialUseFactor2, outsideStateFactor2, vehicleValueFactor2;
 
  */
-    BusinessLogic businessLogic;
+    QuoteAmountCalculator quoteAmountCalculator;
     Applicant applicant;
 
     @BeforeEach
     void setUp() {
 
-        businessLogic = new BusinessLogic();
+        quoteAmountCalculator = new QuoteAmountCalculator();
         applicant = new Applicant(3L, "prefix", "firstName", "lastName", "telephone", "address1", "address2",
                 "city", "postcode","Hatchback", "1000", "1", "Yes", "No", "date",
                 "10000", "N/A", 0.0 );
@@ -38,7 +38,7 @@ class BusinessLogicTest {
 
         double expectedResult = 232.32;
 
-        businessLogic.calculateInsuranceQuote(applicant);
+        quoteAmountCalculator.calculateInsuranceQuote(applicant);
 
         assertEquals(expectedResult, applicant.getQuoteAmount(), 0.2);
     }

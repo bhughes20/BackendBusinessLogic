@@ -11,7 +11,7 @@ import static com.example.applicants.service.businessLogic.VehicleTypeFactor.cal
 import static com.example.applicants.service.businessLogic.VehicleValueFactor.calculateVehicleValueFactor;
 
 @Service
-public class BusinessLogic {
+public class QuoteAmountCalculator {
 
     public void calculateInsuranceQuote(Applicant applicant){
 
