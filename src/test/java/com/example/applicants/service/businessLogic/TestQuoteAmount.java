@@ -9,29 +9,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestQuoteAmount {
 
-/*    Double typeFactor, engineSizeFactor, additionalDriversFactor,
-            commercialUseFactor, outsideStateFactor, vehicleValueFactor;
-    Double typeFactor2, engineSizeFactor2, additionalDriversFactor2,
-            commercialUseFactor2, outsideStateFactor2, vehicleValueFactor2;
-
- */
     QuoteAmountCalculator quoteAmountCalculator;
     Applicant applicant;
+    Applicant applicant2;
+    Applicant applicant3;
 
     @BeforeEach
     void setUp() {
 
         quoteAmountCalculator = new QuoteAmountCalculator();
-        applicant = new Applicant(3L, "prefix", "firstName", "lastName", "telephone", "address1", "address2",
-                "city", "postcode","Hatchback", "1000", "1", "Yes", "No", "date",
+        applicant = new Applicant(3L, "prefix", "firstName", "lastName",
+                "telephone", "address1", "address2",
+                "city", "postcode","Hatchback", "1000", "1",
+                "Yes", "No", "date",
                 "10000", "N/A", 0.0 );
+        applicant2 = new Applicant(4L, "prefix", "firstName", "lastName",
+                "telephone", "address1", "address2",
+                "city", "postcode","Cabriolet", "3000", "1",
+                "No", "No", "date",
+                "15000", "N/A", 0.0 );
+        applicant3  = new Applicant(5L, "prefix", "firstName", "lastName",
+                "telephone", "address1", "address2",
+                "city", "postcode","Hatchback", "1600", "3",
+                "Yes", "Yes", "date",
+                "5000", "N/A", 0.0 );
     }
 
     @AfterEach
     void tearDown() {
     }
-
-    // CREATE METHOD TO getApplicant to use in all test cases
 
     @Test
     void calculateInsuranceQuote1(){
@@ -43,15 +49,23 @@ class TestQuoteAmount {
         assertEquals(expectedResult, applicant.getQuoteAmount(), 0.2);
     }
 
-/*    @Test
+    @Test
     void calculateInsuranceQuote2(){
 
-        double expectedResult = 322.56;
+        double expectedResult = 514.80;
 
-        double actualResult = businessLogic.calculateInsuranceQuote(applicant);
+        quoteAmountCalculator.calculateInsuranceQuote(applicant2);
 
-        assertEquals(expectedResult, actualResult, 0.2);
+        assertEquals(expectedResult, applicant2.getQuoteAmount(), 0.2);
     }
 
- */
+    @Test
+    void calculateInsuranceQuote3(){
+
+        double expectedResult = 371.712;
+
+        quoteAmountCalculator.calculateInsuranceQuote(applicant3);
+
+        assertEquals(expectedResult, applicant3.getQuoteAmount(), 0.3);
+    }
 }
