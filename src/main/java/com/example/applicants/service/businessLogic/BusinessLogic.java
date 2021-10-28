@@ -8,6 +8,7 @@ import static com.example.applicants.service.businessLogic.CommercialUseFactor.c
 import static com.example.applicants.service.businessLogic.EngineSizeFactor.calculateEngineSizeFactor;
 import static com.example.applicants.service.businessLogic.OutsideStateFactor.calculateOutsideStateFactor;
 import static com.example.applicants.service.businessLogic.VehicleTypeFactor.calculateTypeFactor;
+import static com.example.applicants.service.businessLogic.VehicleValueFactor.calculateVehicleValueFactor;
 
 @Service
 public class BusinessLogic {
@@ -19,7 +20,7 @@ public class BusinessLogic {
         double additionalDriversFactor = calculateAdditionalDriversFactor(applicant.getAdditionalDrivers());
         double commercialUseFactor = calculateCommercialUseFactor(applicant.getCommercialPurposes());
         double outsideStateFactor = calculateOutsideStateFactor(applicant.getUsedOutsideState());
-        double vehicleValueFactor = calculateTypeFactor(applicant.getCurrentValue());
+        double vehicleValueFactor = calculateVehicleValueFactor(applicant.getCurrentValue());
 
         double quoteAmount = (100 * typeFactor * engineSizeFactor * additionalDriversFactor
                 * commercialUseFactor * outsideStateFactor * vehicleValueFactor);

@@ -21,32 +21,10 @@ class BusinessLogicTest {
     @BeforeEach
     void setUp() {
 
-    /*    typeFactor = 1.3;
-        engineSizeFactor = 1.0;
-        additionalDriversFactor = 1.1;
-        commercialUseFactor = 1.1;
-        outsideStateFactor = 1.1;
-        vehicleValueFactor = 1.0;
-
-        typeFactor2 = 1.4;
-        engineSizeFactor2 = 1.6;
-        additionalDriversFactor2 = 1.2;
-        commercialUseFactor2 = 1.0;
-        outsideStateFactor2 = 1.0;
-        vehicleValueFactor2 = 1.2;
-
-     */
-
         businessLogic = new BusinessLogic();
-        applicant = new Applicant();
-
-        applicant.setVehicleType("Hatchback");
-        applicant.setEngineSize("1000");
-        applicant.setAdditionalDrivers("1");
-        applicant.setCommercialPurposes("Yes");
-        applicant.setUsedOutsideState("No");
-        applicant.setCurrentValue("10000");
-
+        applicant = new Applicant(3L, "prefix", "firstName", "lastName", "telephone", "address1", "address2",
+                "city", "postcode","Hatchback", "1000", "1", "Yes", "No", "date",
+                "10000", "N/A", 0.0 );
     }
 
     @AfterEach
